@@ -12,9 +12,11 @@ const Hero = () => {
         <div className="animate-fade-in">
           {/* Logo Placeholder */}
           <div className="mb-8">
-            <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl font-bold text-white">LOGO</span>
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=96&h=96&fit=crop" 
+              alt="Pixel Dreams Studio Logo" 
+              className="w-24 h-24 mx-auto rounded-lg object-cover mb-4"
+            />
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
