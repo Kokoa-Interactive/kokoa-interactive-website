@@ -10,12 +10,11 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          {/* Logo Placeholder */}
           <div className="mb-8">
             <img 
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=96&h=96&fit=crop" 
+              src="./public/KokoaInteractiveLogoTransparent.png" 
               alt="Pixel Dreams Studio Logo" 
-              className="w-24 h-24 mx-auto rounded-lg object-cover mb-4"
+              className="w-80 h-80 mx-auto rounded-lg object-contain mb-4"
             />
           </div>
           

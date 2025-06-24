@@ -3,12 +3,12 @@ import { ExternalLink } from 'lucide-react';
 
 const Featuring = () => {
   const featuredGame = {
-    title: "Neural Networks",
-    description: "A groundbreaking sci-fi strategy game where you build and manage AI networks to solve complex problems across different planets. Experience the future of strategic gaming with cutting-edge mechanics and immersive storytelling.",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=600&fit=crop",
-    steamUrl: "https://store.steampowered.com",
-    genre: "Strategy/Simulation",
-    status: "Early Access"
+    title: "Ink Link",
+    description: "Ink Link is a sleek world of action in 2.5D! Outsmart enemies, piece together platforms, and upgrade your skills to take on powerful bosses. Discover hidden paths as darkness creeps in and your ally-turned-enemy, Ink, tests your skills—and your will to survive.",
+    image: "./public/SteamCapsule_1232_706.jpg",
+    steamUrl: "https://store.steampowered.com/app/2908170/Ink_Link/",
+    genre: "Action/Looter Shooter",
+    status: "Coming Soon"
   };
 
   return (

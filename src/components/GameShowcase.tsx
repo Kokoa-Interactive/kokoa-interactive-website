@@ -4,29 +4,27 @@ import { ExternalLink } from 'lucide-react';
 const GameShowcase = () => {
   const games = [
     {
-      title: "Pixel Adventure",
-      description: "A challenging 2D platformer with pixel-perfect controls and beautiful hand-drawn artwork. Navigate through mystical forests and ancient ruins.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
-      steamUrl: "https://store.steampowered.com",
-      genre: "2D Platformer",
+      title: "Nightmare Gravity",
+      description: "My very first experience with programming and proudest achievement. I developed this little shoot'em up game within the frame of my high school maturity work. It includes 10 levels and bosses, 4 ships with unique characteristics, 5 spells, hidden levels and much more!",
+      image: "./public/nightmare_gravity_main.png",
+      genre: "Shoot'em Up",
       status: "Released"
     },
     {
-      title: "Code Warriors",
-      description: "An innovative puzzle game where players solve coding challenges to defeat enemies and progress through a cyberpunk world.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-      steamUrl: "https://store.steampowered.com",
-      itchUrl: "https://itch.io",
-      genre: "Puzzle/Strategy",
-      status: "Released"
+      title: "Ink Link",
+      description: "Ink Link is a sleek world of action in 2.5D! Outsmart enemies, piece together platforms, and upgrade your skills to take on powerful bosses. Discover hidden paths as darkness creeps in and your ally-turned-enemy, Ink, tests your skills—and your will to survive.",
+      image: "./public/steam_capsule_no_logo.jpg",
+      steamUrl: "https://store.steampowered.com/app/2908170/Ink_Link/",
+      genre: "Action/Looter Shooter",
+      status: "Coming Soon"
     },
     {
-      title: "Digital Dreams",
-      description: "An artistic exploration game that takes players through surreal digital landscapes with interactive storytelling.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
-      itchUrl: "https://itch.io",
-      genre: "Adventure/Artistic",
-      status: "In Development"
+      title: "ISeeRunes",
+      description: "What happened to your frozen village and how will you lift the curse? Explore the world, fight against monsters and terrible bosses in this RPG/Dungeon crawler game to finally unravel the truth!",
+      image: "./public/iseerunes.png",
+      itchUrl: "https://iseerunes.itch.io/iseerunes",
+      genre: "Action/Adventure",
+      status: "Released"
     }
   ];
 
