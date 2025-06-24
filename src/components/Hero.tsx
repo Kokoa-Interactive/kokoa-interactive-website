@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="mb-8">
             <img 
-              src="./public/KokoaInteractiveLogoTransparent.png" 
+              src="/KokoaInteractiveLogoTransparent.png" 
               alt="Pixel Dreams Studio Logo" 
               className="w-80 h-80 mx-auto rounded-lg object-contain mb-4"
             />

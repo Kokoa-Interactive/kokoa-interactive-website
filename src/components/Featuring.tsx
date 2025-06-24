@@ -5,7 +5,7 @@ const Featuring = () => {
   const featuredGame = {
     title: "Ink Link",
     description: "Ink Link is a sleek world of action in 2.5D! Outsmart enemies, piece together platforms, and upgrade your skills to take on powerful bosses. Discover hidden paths as darkness creeps in and your ally-turned-enemy, Ink, tests your skills—and your will to survive.",
-    image: "./public/SteamCapsule_1232_706.jpg",
+    image: "/SteamCapsule_1232_706.jpg",
     steamUrl: "https://store.steampowered.com/app/2908170/Ink_Link/",
     genre: "Action/Looter Shooter",
     status: "Coming Soon"
@@ -29,7 +29,7 @@ const Featuring = () => {
               <img 
                 src={featuredGame.image} 
                 alt={featuredGame.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
               />
             </div>
             

@@ -6,14 +6,14 @@ const GameShowcase = () => {
     {
       title: "Nightmare Gravity",
       description: "My very first experience with programming and proudest achievement. I developed this little shoot'em up game within the frame of my high school maturity work. It includes 10 levels and bosses, 4 ships with unique characteristics, 5 spells, hidden levels and much more!",
-      image: "./public/nightmare_gravity_main.png",
+      image: "/nightmare_gravity_main.png",
       genre: "Shoot'em Up",
       status: "Released"
     },
     {
       title: "Ink Link",
       description: "Ink Link is a sleek world of action in 2.5D! Outsmart enemies, piece together platforms, and upgrade your skills to take on powerful bosses. Discover hidden paths as darkness creeps in and your ally-turned-enemy, Ink, tests your skills—and your will to survive.",
-      image: "./public/steam_capsule_no_logo.jpg",
+      image: "/steam_capsule_no_logo.jpg",
       steamUrl: "https://store.steampowered.com/app/2908170/Ink_Link/",
       genre: "Action/Looter Shooter",
       status: "Coming Soon"
@@ -21,7 +21,7 @@ const GameShowcase = () => {
     {
       title: "ISeeRunes",
       description: "What happened to your frozen village and how will you lift the curse? Explore the world, fight against monsters and terrible bosses in this RPG/Dungeon crawler game to finally unravel the truth!",
-      image: "./public/iseerunes.png",
+      image: "/iseerunes.png",
       itchUrl: "https://iseerunes.itch.io/iseerunes",
       genre: "Action/Adventure",
       status: "Released"

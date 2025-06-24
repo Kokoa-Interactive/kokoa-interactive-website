@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, Heart, Youtube, X } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -13,31 +13,23 @@ const Footer = () => {
           
           <div className="flex space-x-6">
             <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 bg-slate-800 rounded-full hover:bg-purple-600 transition-all duration-300 hover:scale-110"
-            >
-              <Github size={20} />
-            </a>
-            <a 
-              href="https://twitter.com" 
+              href="https://x.com/KokoaInteractiv" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-slate-800 rounded-full hover:bg-blue-500 transition-all duration-300 hover:scale-110"
             >
-              <Twitter size={20} />
+              <X size={20} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.youtube.com/watch?v=L-HPxTs_5sI&ab_channel=KokoaInteractive" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-110"
             >
-              <Linkedin size={20} />
+              <Youtube size={20} />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:community@kokoa-interactive.com"
               className="p-3 bg-slate-800 rounded-full hover:bg-green-500 transition-all duration-300 hover:scale-110"
             >
               <Mail size={20} />
