@@ -1,13 +1,12 @@
 
-import GameCard from './GameCard';
+import { ExternalLink } from 'lucide-react';
 
 const GameShowcase = () => {
-  // Sample games data - you can replace with your actual games
   const games = [
     {
       title: "Pixel Adventure",
       description: "A challenging 2D platformer with pixel-perfect controls and beautiful hand-drawn artwork. Navigate through mystical forests and ancient ruins.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
       steamUrl: "https://store.steampowered.com",
       genre: "2D Platformer",
       status: "Released"
@@ -15,24 +14,16 @@ const GameShowcase = () => {
     {
       title: "Code Warriors",
       description: "An innovative puzzle game where players solve coding challenges to defeat enemies and progress through a cyberpunk world.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
       steamUrl: "https://store.steampowered.com",
       itchUrl: "https://itch.io",
       genre: "Puzzle/Strategy",
       status: "Released"
     },
     {
-      title: "Neural Networks",
-      description: "A sci-fi strategy game where you build and manage AI networks to solve complex problems across different planets.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=450&fit=crop",
-      steamUrl: "https://store.steampowered.com",
-      genre: "Strategy/Simulation",
-      status: "Early Access"
-    },
-    {
       title: "Digital Dreams",
       description: "An artistic exploration game that takes players through surreal digital landscapes with interactive storytelling.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=450&fit=crop",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
       itchUrl: "https://itch.io",
       genre: "Adventure/Artistic",
       status: "In Development"
@@ -51,16 +42,70 @@ const GameShowcase = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {games.map((game, index) => (
-            <div 
-              key={game.title}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <GameCard {...game} />
-            </div>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <div className="relative h-96 overflow-hidden rounded-2xl">
+            {games.map((game, index) => (
+              <div
+                key={game.title}
+                className="group absolute inset-0 overflow-hidden"
+                style={{
+                  clipPath: index === 0 
+                    ? 'polygon(0 0, 35% 0, 40% 100%, 0% 100%)'
+                    : index === 1 
+                    ? 'polygon(35% 0, 65% 0, 70% 100%, 40% 100%)'
+                    : 'polygon(65% 0, 100% 0, 100% 100%, 70% 100%)'
+                }}
+              >
+                <img
+                  src={game.image}
+                  alt={game.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-8">
+                  <div className="text-center text-white max-w-xs">
+                    <h3 className="text-2xl font-bold mb-2">{game.title}</h3>
+                    <p className="text-purple-400 text-sm mb-3">{game.genre}</p>
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">{game.description}</p>
+                    <div className="flex flex-col gap-2">
+                      <span className={`px-2 py-1 text-xs rounded-full ${
+                        game.status === 'Released' 
+                          ? 'bg-green-500/20 text-green-400' 
+                          : 'bg-yellow-500/20 text-yellow-400'
+                      }`}>
+                        {game.status}
+                      </span>
+                      <div className="flex gap-2 justify-center">
+                        {game.steamUrl && (
+                          <a
+                            href={game.steamUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded text-xs hover:bg-blue-700 transition-colors"
+                          >
+                            <ExternalLink size={12} />
+                            Steam
+                          </a>
+                        )}
+                        {game.itchUrl && (
+                          <a
+                            href={game.itchUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 px-3 py-1 bg-pink-600 text-white rounded text-xs hover:bg-pink-700 transition-colors"
+                          >
+                            <ExternalLink size={12} />
+                            itch.io
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
