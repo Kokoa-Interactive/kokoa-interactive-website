@@ -1,4 +1,3 @@
-
 import { ExternalLink } from 'lucide-react';
 
 const GameShowcase = () => {
@@ -42,18 +41,18 @@ const GameShowcase = () => {
           </p>
         </div>
         
-        <div className="max-w-6xl mx-auto">
-          <div className="relative h-96 overflow-hidden rounded-2xl">
+        <div className="w-full">
+          <div className="relative h-96 overflow-hidden">
             {games.map((game, index) => (
               <div
                 key={game.title}
                 className="group absolute inset-0 overflow-hidden"
                 style={{
                   clipPath: index === 0 
-                    ? 'polygon(0 0, 35% 0, 40% 100%, 0% 100%)'
+                    ? 'polygon(0 0, 33.33% 0, 36.67% 100%, 0% 100%)'
                     : index === 1 
-                    ? 'polygon(35% 0, 65% 0, 70% 100%, 40% 100%)'
-                    : 'polygon(65% 0, 100% 0, 100% 100%, 70% 100%)'
+                    ? 'polygon(33.33% 0, 66.67% 0, 70% 100%, 36.67% 100%)'
+                    : 'polygon(66.67% 0, 100% 0, 100% 100%, 70% 100%)'
                 }}
               >
                 <img

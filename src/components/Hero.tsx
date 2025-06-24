@@ -10,6 +10,13 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
+          {/* Logo Placeholder */}
+          <div className="mb-8">
+            <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl font-bold text-white">LOGO</span>
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Pixel Dreams Studio
           </h1>
