@@ -13,25 +13,21 @@ const Hero = () => {
           <div className="mb-8">
             <img 
               src="/KokoaInteractiveLogoTransparent.png" 
-              alt="Pixel Dreams Studio Logo" 
+              alt="Kokoa Interactive Logo" 
               className="w-80 h-80 mx-auto rounded-lg object-contain mb-4"
             />
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Pixel Dreams Studio
-          </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
             "Where imagination meets code, and dreams become playable realities"
           </p>
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
