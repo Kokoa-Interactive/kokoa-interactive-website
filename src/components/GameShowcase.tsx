@@ -33,13 +33,44 @@ const GameShowcase = () => {
     }
   ];
 
-  const getClipPath = (index) => {
-    return [
-      'polygon(0 0, 100% 0, 70% 100%, 0% 100%)',
-      'polygon(0 0, 100% 0, 100% 100%, 30% 100%)',
-      'polygon(30% 0, 100% 0, 100% 100%, 0% 100%)'
-    ][index];
+  const getClipPath = (index, isHovered) => {
+    if (isHovered)
+      return [
+        'polygon(0 0, 100% 0, 90% 100%, 0% 100%)',
+        'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+        'polygon(10% 0, 100% 0, 100% 100%, 0% 100%)'
+      ][index];
+    else
+      return [
+        'polygon(0 0, 100% 0, 70% 100%, 0% 100%)',
+        'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+        'polygon(30% 0, 100% 0, 100% 100%, 0% 100%)'
+      ][index];
   };
+
+  const getMarginRight = (index) => {
+    return [
+      '-140px',
+      '0',
+      '0'
+    ][index]
+  }
+
+  const getMarginLeft = (index) => {
+    return [
+      '0',
+      '0',
+      '-140px'
+    ][index]
+  }
+
+  const getZIndex = (index) => {
+    return [
+      '2',
+      '1',
+      '2'
+    ][index]
+  }
 
   return (
     <section className="py-20 bg-slate-900">
@@ -67,7 +98,12 @@ const GameShowcase = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`group relative overflow-hidden transition-all duration-500 ease-in-out ${widthClass}`}
-                style={{ clipPath: getClipPath(index) }}
+                style={{ 
+                  clipPath: getClipPath(index, isHovered),
+                  marginRight: getMarginRight(index),
+                  marginLeft: getMarginLeft(index),
+                  zIndex: getZIndex(index)
+                 }}
               >
                 <img
                   src={game.image}
