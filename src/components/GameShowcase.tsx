@@ -97,7 +97,7 @@ const GameShowcase = () => {
                 key={game.title}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative overflow-hidden transition-all duration-500 ease-in-out ${widthClass}`}
+                className={`group relative overflow-hidden transition-all duration-500 ease-in-out ${widthClass} translate-x-[40px]`}
                 style={{ 
                   clipPath: getClipPath(index, isHovered),
                   marginRight: getMarginRight(index),
