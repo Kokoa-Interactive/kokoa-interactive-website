@@ -36,21 +36,21 @@ const GameShowcase = () => {
   const getClipPath = (index, isHovered) => {
     if (isHovered)
       return [
-        'polygon(0 0, 100% 0, 90% 100%, 0% 100%)',
+        'polygon(0 0, 100% 0, 95% 100%, 0% 100%)',
         'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-        'polygon(10% 0, 100% 0, 100% 100%, 0% 100%)'
+        'polygon(5% 0, 100% 0, 100% 100%, 0% 100%)'
       ][index];
     else
       return [
-        'polygon(0 0, 100% 0, 70% 100%, 0% 100%)',
+        'polygon(0 0, 100% 0, 85% 100%, 0% 100%)',
         'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-        'polygon(30% 0, 100% 0, 100% 100%, 0% 100%)'
+        'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)'
       ][index];
   };
 
   const getMarginRight = (index) => {
     return [
-      '-140px',
+      '-40px',
       '0',
       '0'
     ][index]
@@ -60,7 +60,7 @@ const GameShowcase = () => {
     return [
       '0',
       '0',
-      '-140px'
+      '-40px'
     ][index]
   }
 
@@ -87,7 +87,7 @@ const GameShowcase = () => {
             const isHovered = hoveredIndex === index;
             const widthClass =
               hoveredIndex === null
-                ? (index == 1 ? 'basis-2/3' : 'basis-1/6')
+                ? (index == 1 ? 'basis-[55.56%]' : 'basis-[22.22%]')
                 : isHovered
                 ? 'basis-3/5'
                 : 'basis-1/5';
