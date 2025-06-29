@@ -87,7 +87,7 @@ const GameShowcase = () => {
             const isHovered = hoveredIndex === index;
             const widthClass =
               hoveredIndex === null
-                ? 'basis-1/3'
+                ? (index == 1 ? 'basis-2/3' : 'basis-1/6')
                 : isHovered
                 ? 'basis-3/5'
                 : 'basis-1/5';
