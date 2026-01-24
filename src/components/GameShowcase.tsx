@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const GameShowcase = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [mobileIndex, setMobileIndex] = useState(0);
 
   const games = [
     {
@@ -72,6 +73,14 @@ const GameShowcase = () => {
     ][index]
   }
 
+  const handlePrevGame = () => {
+    setMobileIndex((prev) => (prev === 0 ? games.length - 1 : prev - 1));
+  };
+
+  const handleNextGame = () => {
+    setMobileIndex((prev) => (prev === games.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
@@ -82,7 +91,8 @@ const GameShowcase = () => {
           </p>
         </div>
 
-        <div className="flex h-96 w-full overflow-hidden rounded-xl">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex h-96 w-full overflow-hidden rounded-xl">
           {games.map((game, index) => {
             const isHovered = hoveredIndex === index;
             const widthClass =
@@ -155,6 +165,98 @@ const GameShowcase = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden relative">
+          <div className="relative h-96 w-full overflow-hidden rounded-xl">
+            {games.map((game, index) => (
+              <div
+                key={game.title}
+                className={`absolute inset-0 transition-opacity duration-500 ${
+                  index === mobileIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+              >
+                <img
+                  src={game.image}
+                  alt={game.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-6">
+                  <div className="text-center text-white max-w-md">
+                    <h3 className="text-2xl font-bold mb-2">{game.title}</h3>
+                    <p className="text-purple-400 text-sm mb-3">{game.genre}</p>
+                    <p className="text-gray-300 text-sm mb-4">{game.description}</p>
+                    <div className="flex flex-col gap-2 items-center">
+                      <span
+                        className={`px-3 py-1 text-xs rounded-full ${
+                          game.status === 'Released'
+                            ? 'bg-green-500/20 text-green-400'
+                            : 'bg-yellow-500/20 text-yellow-400'
+                        }`}
+                      >
+                        {game.status}
+                      </span>
+                      <div className="flex gap-2 justify-center">
+                        {game.steamUrl && (
+                          <a
+                            href={game.steamUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded text-xs hover:bg-blue-700 transition-colors"
+                          >
+                            <ExternalLink size={14} />
+                            Steam
+                          </a>
+                        )}
+                        {game.itchUrl && (
+                          <a
+                            href={game.itchUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1 px-3 py-1 bg-pink-600 text-white rounded text-xs hover:bg-pink-700 transition-colors"
+                          >
+                            <ExternalLink size={14} />
+                            itch.io
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={handlePrevGame}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-2 rounded-full transition-colors z-10"
+            aria-label="Previous game"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+            onClick={handleNextGame}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-2 rounded-full transition-colors z-10"
+            aria-label="Next game"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-4">
+            {games.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setMobileIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === mobileIndex ? 'bg-white w-6' : 'bg-white/40'
+                }`}
+                aria-label={`Go to game ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
