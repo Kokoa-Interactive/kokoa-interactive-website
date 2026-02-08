@@ -5,10 +5,10 @@ const Featuring = () => {
   const featuredGame = {
     title: "Ink Link",
     description: "Ink Link is a sleek world of action in 2.5D! Outsmart enemies, piece together platforms, and upgrade your skills to take on powerful bosses. Discover hidden paths as darkness creeps in and your ally-turned-enemy, Ink, tests your skills—and your will to survive.",
-    image: "/SteamCapsule_1232_706.jpg",
+    image: "/InkLinkWithLogo.jpg",
     steamUrl: "https://store.steampowered.com/app/2908170/Ink_Link/",
     genre: "Action/Looter Shooter",
-    status: "Coming Soon"
+    status: "Released"
   };
 
   return (
@@ -38,7 +38,7 @@ const Featuring = () => {
                 <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors">
                   {featuredGame.title}
                 </h3>
-                <span className="px-3 py-1 text-sm rounded-full bg-yellow-500/20 text-yellow-400">
+                <span className="px-3 py-1 text-sm rounded-full bg-green-500/20 text-green-400">
                   {featuredGame.status}
                 </span>
               </div>
