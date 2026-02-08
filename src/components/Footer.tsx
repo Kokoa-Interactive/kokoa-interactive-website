@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Linkedin, Mail, Heart, Youtube, X } from 'lucide-react';
+import { Heart, Youtube, X, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -29,10 +29,11 @@ const Footer = () => {
               <Youtube size={20} />
             </a>
             <a 
-              href="mailto:community@kokoa-interactive.com"
+              href="#contact"
               className="p-3 bg-slate-800 rounded-full hover:bg-green-500 transition-all duration-300 hover:scale-110"
+              aria-label="Go to contact form"
             >
-              <Mail size={20} />
+              <MessageCircle size={20} />
             </a>
           </div>
         </div>
