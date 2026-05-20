@@ -3,12 +3,12 @@ import { ExternalLink } from 'lucide-react';
 
 const Featuring = () => {
   const featuredGame = {
-    title: "Ink Link",
-    description: "Ink Link is a sleek world of action in 2.5D! Outsmart enemies, piece together platforms, and upgrade your skills to take on powerful bosses. Discover hidden paths as darkness creeps in and your ally-turned-enemy, Ink, tests your skills—and your will to survive.",
-    image: "/InkLinkWithLogo.jpg",
-    steamUrl: "https://store.steampowered.com/app/2908170/Ink_Link/",
-    genre: "Action/Looter Shooter",
-    status: "Released"
+    title: "Cucumber Airlines",
+    description: "You finally landed your dream job as a flight attendant—too bad your passengers are a bunch of pesky cucumbers. Keep the cabin from crumbling into absolute mayhem, juggle unruly veggies and your sanity to ensure a (mostly) safe landing.",
+    image: "/CucumberAirlinesWithLogo.png",
+    steamUrl: "https://store.steampowered.com/app/4608610/Cucumber_Airlines/",
+    genre: "Simulation/Management",
+    status: "Coming soon"
   };
 
   return (
@@ -19,7 +19,7 @@ const Featuring = () => {
             Featuring
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Our latest creation, pushing the boundaries of interactive entertainment
+            Have a look at upcoming and recently released games from<br /> Kokoa Interactive. 
           </p>
         </div>
         

@@ -6,14 +6,14 @@ const GameShowcase = () => {
   const [mobileIndex, setMobileIndex] = useState(0);
 
   const games = [
-    {
-      title: "Nightmare Gravity",
-      description:
-        "My very first experience with programming and proudest achievement. I developed this little shoot'em up game within the frame of my high school maturity work. It includes 10 levels and bosses, 4 ships with unique characteristics, 5 spells, hidden levels and much more!",
-      image: "/nightmare_gravity_main.jpg",
-      genre: "Shoot'em Up",
-      status: "Released"
-    },
+    // {
+    //   title: "Nightmare Gravity",
+    //   description:
+    //     "My very first experience with programming and proudest achievement. I developed this little shoot'em up game within the frame of my high school maturity work. It includes 10 levels and bosses, 4 ships with unique characteristics, 5 spells, hidden levels and much more!",
+    //   image: "/nightmare_gravity_main.jpg",
+    //   genre: "Shoot'em Up",
+    //   status: "Released"
+    // },
     {
       title: "Ink Link",
       description:
@@ -22,6 +22,15 @@ const GameShowcase = () => {
       steamUrl: "https://store.steampowered.com/app/2908170/Ink_Link/",
       genre: "Action/Looter Shooter",
       status: "Released"
+    },
+    {
+      title: "Cucumber Airlines",
+      description:
+        "You finally landed your dream job as a flight attendant—too bad your passengers are a bunch of pesky cucumbers. Keep the cabin from crumbling into absolute mayhem, juggle unruly veggies and your sanity to ensure a (mostly) safe landing.",
+      image: "/CucumberAirlinesWithLogo.png",
+      steamUrl: "https://store.steampowered.com/app/4608610/Cucumber_Airlines/",
+      genre: "Simulation/Management",
+      status: "Coming soon"
     },
     {
       title: "ISeeRunes",
